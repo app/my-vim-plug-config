@@ -4,6 +4,7 @@ filetype plugin indent on
 set clipboard=unnamedplus
 let mapleader=" "
 
+source ~/.vim/plugin/plugins.vim
 
 set nu
 set cursorline

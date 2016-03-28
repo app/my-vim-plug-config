@@ -1,10 +1,10 @@
+source ~/.vim/plugin/plugins.vim
 set nocompatible
 syntax on
 filetype plugin indent on
 set clipboard=unnamedplus
 let mapleader=" "
 
-source ~/.vim/plugin/plugins.vim
 
 set nu
 set cursorline
@@ -51,8 +51,8 @@ nmap <C-k> <C-u>
 "cnoremap <Esc>d <S-Right><Delete>
 
 " Paste with autoindent
-nnoremap p p=`]`
-nnoremap <S-p> <S-p>=`]`
+nnoremap p p=']'
+nnoremap <S-p> <S-p>=']'
 " Select all and Copy 
 nnoremap <C-y> :%y<CR>
 
@@ -140,21 +140,6 @@ nmap <Leader>v viwc'<c-r>"'<esc>
 " Обворачиваем выделение в двойные/одинарные кавычки
 vmap <Leader>w c"<c-r>""<esc>
 vmap <Leader>v c'<c-r>"'<esc>
-
-" Выделение блока по отступу
-function! SelectIndent ()
-  let temp_var=indent(line("."))
-  while indent(line(".")-1) >= temp_var
-    exe "normal k"
-  endwhile
-  exe "normal V"
-  while indent(line(".")+1) >= temp_var
-    exe "normal j"
-  endwhile
-endfun
-nmap <Leader>i :call SelectIndent()<CR>
-" Для выделения блока по отступу так же есть плагин vim-indent-object
-" Если он установлен, выделение блока — vii или vai или vaI
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()

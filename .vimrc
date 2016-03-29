@@ -6,6 +6,7 @@ set clipboard=unnamedplus
 let mapleader=" "
 
 
+
 set nu
 set cursorline
 set noswapfile
@@ -13,6 +14,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set laststatus=2
 
 
 " Vertical movement for wrapped lines. Switches off linewise mode.

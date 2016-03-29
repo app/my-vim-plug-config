@@ -100,7 +100,6 @@ autocmd FileType php set tabstop=2 | set shiftwidth=2
 
 " Add new line below in Insert mode
 imap <C-o> <esc>o
-imap <S-o> <esc><S-o>
 
 " Stop moving cursor back with Escape
 let CursorColumnI = 0

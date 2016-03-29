@@ -14,3 +14,11 @@
 ```
 
 - Перезапустить vim
+
+
+### Дополнительная настройка neocomplete
+Для того чтобы neocomplete начал полноценно использовать сниппеты плагина ultisnips
+задаем источник данных файлом ultisnips.vim
+```
+cp ./ultisnips.vim ~/.vim/bundle/neocomplete.vim/autoload/neocomplete/sources/ultisnips.vim
+```

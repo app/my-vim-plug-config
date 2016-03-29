@@ -51,10 +51,10 @@ nmap <C-k> <C-u>
 "cnoremap <Esc>d <S-Right><Delete>
 
 " Paste with autoindent
-nnoremap p p=']'
-nnoremap <S-p> <S-p>=']'
+nnoremap p p==
+nnoremap <S-p> <S-p>==
 " Select all and Copy 
-nnoremap <C-y> :%y<CR>
+"nnoremap <C-y> :%y<CR>
 
 
 " Search highlighting redefinition

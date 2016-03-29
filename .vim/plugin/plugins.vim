@@ -15,9 +15,9 @@ Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 call plug#end()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
-""""""  Plugins shortcuts redifinition """""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
+""""""  Plugins options setting   """""""""
+"""""""""""""""""""""""""""""""""""""""""""
 if &term!="xterm"
   syntax enable
   set background=dark
@@ -31,6 +31,7 @@ endif
 "vim-airline show buffers on window top
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
 
 " autoclosing pairs. "<:>" removed
 let delimitMate_matchpairs = "(:),[:],{:}"
@@ -77,9 +78,10 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-
 " use jshint
 let g:syntastic_javascript_checkers = ['jshint']
 
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
+
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc

@@ -13,6 +13,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'heavenshell/vim-jsdoc'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -60,11 +61,11 @@ inoremap <C-B> <Esc>:update<CR> :CtrlPBuffer<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_regexp = 1
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll)$',
-      \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-      \ }
+"let g:ctrlp_custom_ignore = {
+      "\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      "\ 'file': '\v\.(exe|so|dll)$',
+      "\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+      "\ }
 
 " The Silver Searcher
 if executable('ag')
@@ -84,4 +85,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
 
+"Load additional snippet from vim-snippets/UltiSnips/ plugin folder
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
+let g:snips_author_email = 'apaskal(at)gmail'

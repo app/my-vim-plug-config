@@ -14,6 +14,8 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'heavenshell/vim-jsdoc', {'for':'javascript'}
+Plug 'othree/jspc.vim',{'for':'javascript'}
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for':'javascript' }
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""

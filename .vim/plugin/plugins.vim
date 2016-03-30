@@ -9,11 +9,11 @@ Plug 'powerman/vim-plugin-ruscmd'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', {'for':'coffee'}
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'heavenshell/vim-jsdoc'
+Plug 'heavenshell/vim-jsdoc', {'for':'javascript'}
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""

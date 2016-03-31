@@ -5,6 +5,7 @@ Plug 'wookiehangover/jshint.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'alunny/pegjs-vim'
+Plug 'scrooloose/syntastic', {'for':'php'}
 Plug 'powerman/vim-plugin-ruscmd'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -13,8 +14,8 @@ Plug 'kchmck/vim-coffee-script', {'for':'coffee'}
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'heavenshell/vim-jsdoc', {'for':'javascript'}
-Plug 'othree/jspc.vim',{'for':'javascript'}
+Plug 'heavenshell/vim-jsdoc', {'for':'javascript'}  " inserts jsdoc comments before function
+"Plug 'othree/jspc.vim',{'for':'javascript'}
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for':'javascript' }
 call plug#end()
 
@@ -86,6 +87,11 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
+
+"let g:syntastic_error_symbol = "\u2717"
+"let g:syntastic_warning_symbol = "\u26A0"
+let g:syntastic_error_symbol = "»"
+let g:syntastic_warning_symbol = "\u266a"
 
 "Load additional snippet from vim-snippets/UltiSnips/ plugin folder
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc

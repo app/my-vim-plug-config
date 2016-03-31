@@ -17,6 +17,9 @@ set shiftwidth=2
 set laststatus=2
 
 
+" Select all text
+nmap <C-a> ggVG
+
 " Vertical movement for wrapped lines. Switches off linewise mode.
 nmap j gj
 nmap k gk

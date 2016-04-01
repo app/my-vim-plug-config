@@ -37,22 +37,22 @@ nnoremap p p==
 nnoremap <S-p> <S-p>==
 
 " Search highlighting redefinition
-" Use Ctrl+l to swith off highlighting of highlighted text
-function <SID>HLSearch()
-	let cursorOnLastSearchWord=( @/ == '\<'.expand("<cword>").'\>')
-	let searchNewWord = '*N'
+" Use Ctrl+l toif !exists("*ReloadConfigs") swith off highlighting of highlighted text
+function! <SID>HLSearch()
+  let cursorOnLastSearchWord=( @/ == '\<'.expand("<cword>").'\>')
+  let searchNewWord = '*N'
 
-	if cursorOnLastSearchWord
-		if &hls
-			set nohls
-		else
-			set hls
-		endif
-		return ":echo ''\r"
-	else
-		set hls
-		return searchNewWord
-	endif
+  if cursorOnLastSearchWord
+    if &hls
+      set nohls
+    else
+      set hls
+    endif
+    return ":echo ''\r"
+  else
+    set hls
+    return searchNewWord
+  endif
 endfunction
 nnoremap <silent> <expr> <leader>* <SID>HLSearch()
 nnoremap <silent> <expr> <leader>8 <SID>HLSearch()

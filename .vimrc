@@ -1,4 +1,4 @@
-source ~/.vim/plugin/plugins.vim
+source ~/.vim/myplugins.vim
 set nocompatible
 syntax on
 filetype plugin indent on
@@ -89,6 +89,13 @@ vnorem <Leader>/ y/<c-r>"<cr>
 " Search and replace selected text
 vmap <Leader>r "sy:%s/<C-R>=substitute(@s,"\n",'\\n','g')<CR>/
 vmap /r "sy:%s/<C-R>=substitute(@s,"\n",'\\n','g')<CR>/
+vmap <C-h> "sy:%s/<C-R>=substitute(@s,"\n",'\\n','g')<CR>/
+" Search and replace text under cursor
+nmap <C-h> :%s/<C-R>=expand("<cword>")<CR>/
+imap <C-h> <Esc>:%s/<C-R>=expand("<cword>")<CR>/
+" Search text under cursor
+nmap <C-f> /<C-R>=expand("<cword>")<CR><CR>
+imap <C-f> <Esc>/<C-R>=expand("<cword>")<CR><CR>
 
 autocmd FileType coffee set tabstop=2 | set shiftwidth=2 | set expandtab| set softtabstop=2| set list
 set listchars=tab:\|.,trail:.

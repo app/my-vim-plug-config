@@ -104,3 +104,4 @@ let g:syntastic_error_symbol = "»"
 "Load additional snippet from vim-snippets/UltiSnips/ plugin folder
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
 let g:snips_author_email = 'apaskal(at)gmail'
+

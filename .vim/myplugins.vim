@@ -102,6 +102,23 @@ autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
 let g:snips_author_email = 'apaskal(at)gmail'
 
 "Fzf setup
+"{{{
 let g:fzf_command_prefix = "Fzf"
 let g:fzf_layout = { 'down': '~20%' }
 let g:fzf_buffers_jump = 1
+
+function MyBTags()
+  let g:fzf_layout = { 'right': '30%' }
+  FzfBTags
+endfunction
+
+function MyFiles()
+  let g:fzf_layout = { 'down': '30%'}
+  FzfFiles
+endfunction
+
+function MyBuffers()
+  let g:fzf_layout = { 'down': '30%'}
+  FzfBuffers
+endfunction
+"}}}

@@ -102,7 +102,7 @@ imap <C-Up> <Esc>:lprevious<CR>
 " Fzf shortcuts
 nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
 nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
-nmap <leader>t :FzfBTags<CR>
+nmap <leader>t :call MyBTags()<CR>
 
 
 " Home and End movements via Ctrl+a and Ctrl+e

@@ -85,6 +85,9 @@ nmap <Leader>v viwc'<c-r>"'<esc>
 vmap <Leader>w c"<c-r>""<esc>
 vmap <Leader>v c'<c-r>"'<esc>
 
+" Переход к первой локации/ошибке
+nmap <leader>1 :lfirst<CR>
+imap <leader>1 :lfirst<CR>
 " Переход к следующей локации. Используется для перехода к следующей ошибке
 nmap <leader>n :lnext<CR>
 imap <leader>n <Esc>:lnext<CR>

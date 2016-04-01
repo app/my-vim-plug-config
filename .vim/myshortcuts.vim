@@ -85,6 +85,16 @@ nmap <Leader>v viwc'<c-r>"'<esc>
 vmap <Leader>w c"<c-r>""<esc>
 vmap <Leader>v c'<c-r>"'<esc>
 
+" Переход к следующей локации. Используется для перехода к следующей ошибке
+nmap <leader>n :lnext<CR>
+imap <leader>n <Esc>:lnext<CR>
+nmap <C-Down> :lnext<CR>
+imap <C-Down> <Esc>:lnext<CR>
+" Переход к предыдущей локации. Используется для перехода к предыдущей ошибке
+nmap <leader>p :lprevious<CR>
+imap <leader>p <Esc>:lprevious<CR>
+nmap <C-Up> :lprevious<CR>
+imap <C-Up> <Esc>:lprevious<CR>
 
 " Home and End movements via Ctrl+a and Ctrl+e
 "nmap <C-a> ^

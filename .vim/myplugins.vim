@@ -82,8 +82,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
 " use jshint
 " jshint should be installed and available in your command line 
 let g:syntastic_javascript_checkers = ['jshint']
@@ -91,8 +89,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
 
-"let g:syntastic_error_symbol = "\u2717"
-"let g:syntastic_warning_symbol = "\u26A0"
+let g:syntastic_warning_symbol = "»"
 let g:syntastic_error_symbol = "»"
 " }}}
 

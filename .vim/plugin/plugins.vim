@@ -1,11 +1,10 @@
 call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'wookiehangover/jshint.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'alunny/pegjs-vim'
-Plug 'scrooloose/syntastic', {'for':'php'}
+Plug 'scrooloose/syntastic'
 Plug 'powerman/vim-plugin-ruscmd'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -82,7 +81,16 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+"{{{ Syntastic setup
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
 " use jshint
+" jshint should be installed and available in your command line 
 let g:syntastic_javascript_checkers = ['jshint']
 
 " show any linting errors immediately
@@ -91,7 +99,7 @@ let g:syntastic_check_on_open = 1
 "let g:syntastic_error_symbol = "\u2717"
 "let g:syntastic_warning_symbol = "\u26A0"
 let g:syntastic_error_symbol = "»"
-let g:syntastic_warning_symbol = "\u266a"
+" }}}
 
 "Load additional snippet from vim-snippets/UltiSnips/ plugin folder
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc

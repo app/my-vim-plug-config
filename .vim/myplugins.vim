@@ -38,11 +38,6 @@ let g:airline_powerline_fonts = 1
 
 " autoclosing pairs. "<:>" removed
 let delimitMate_matchpairs = "(:),[:],{:}"
-" Toggle comments by pressing cc while in normal mode
-map cc <leader>c<space>
-" Cyrillic 'сс' :)
-map сс <leader>c<space>
-map <leader>/ <leader>c<space>
 
 " Autocomplition plugin 'neocomplete'
 let g:neocomplete#enable_at_startup = 1

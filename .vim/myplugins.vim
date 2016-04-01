@@ -1,10 +1,14 @@
 call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'alunny/pegjs-vim'
 Plug 'scrooloose/syntastic'
+Plug 'edkolev/tmuxline.vim'
 Plug 'powerman/vim-plugin-ruscmd'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -97,3 +101,7 @@ let g:syntastic_error_symbol = "»"
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
 let g:snips_author_email = 'apaskal(at)gmail'
 
+"Fzf setup
+let g:fzf_command_prefix = "Fzf"
+let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_buffers_jump = 1

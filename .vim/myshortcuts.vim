@@ -99,6 +99,12 @@ imap <leader>p <Esc>:lprevious<CR>
 nmap <C-Up> :lprevious<CR>
 imap <C-Up> <Esc>:lprevious<CR>
 
+" Fzf shortcuts
+nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
+nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
+nmap <leader>t :FzfBTags<CR>
+
+
 " Home and End movements via Ctrl+a and Ctrl+e
 "nmap <C-a> ^
 "nmap <C-e> $

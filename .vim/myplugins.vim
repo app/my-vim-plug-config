@@ -55,11 +55,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" CtrlP key maps
-noremap <C-B> :CtrlPBuffer<CR>
-inoremap <C-B> <Esc>:update<CR> :CtrlPBuffer<CR>
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>p :CtrlP<CR>
 " CtrlP options
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'

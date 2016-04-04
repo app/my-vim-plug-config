@@ -16,10 +16,12 @@ inoremap <C-Q> <C-O>:q<CR>
 noremap <silent> <Leader>q :bd<CR>
 
 " Toggle comments by pressing cc while in normal mode
-map cc <leader>c<space>
+nmap cc <leader>c<space>
+vmap cc <leader>c<space>
 " Cyrillic 'сс' :)
-map сс <leader>c<space>
-map <leader>/ <leader>c<space>
+nmap сс <leader>c<space>
+vmap cc <leader>c<space>
+nmap <leader>/ <leader>c<space>
 
 " Select all text
 nmap <C-a> ggVG
@@ -33,8 +35,8 @@ nmap <C-j> <C-d>
 nmap <C-k> <C-u>
 
 " Paste with autoindent
-nnoremap p p==
-nnoremap <S-p> <S-p>==
+"nnoremap p p==
+"nnoremap <S-p> <S-p>==
 
 " Search highlighting redefinition
 " Use Ctrl+l toif !exists("*ReloadConfigs") swith off highlighting of highlighted text
@@ -89,25 +91,26 @@ vmap <Leader>v c'<c-r>"'<esc>
 
 " Переход к первой локации/ошибке
 nmap <leader>1 :lfirst<CR>
-imap <leader>1 :lfirst<CR>
 " Переход к следующей локации. Используется для перехода к следующей ошибке
 nmap <leader>n :lnext<CR>
-imap <leader>n <Esc>:lnext<CR>
 nmap <C-Down> :lnext<CR>
 imap <C-Down> <Esc>:lnext<CR>
 " Переход к предыдущей локации. Используется для перехода к предыдущей ошибке
 nmap <leader>p :lprevious<CR>
-imap <leader>p <Esc>:lprevious<CR>
 nmap <C-Up> :lprevious<CR>
 imap <C-Up> <Esc>:lprevious<CR>
 
 " Fzf shortcuts
 nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
 nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
-nmap <leader>t :call MyBTags()<CR>
+nmap <leader>ot :call MyBTags()<CR>
+nmap <leader>ob :call MyBuffers()<CR>
+nmap <leader>of :call MyFiles()<CR>
 
 " CtrlP key maps
+nmap <C-B> :CtrlPBuffer<CR>
 nmap <leader>b :CtrlPBuffer<CR>
+imap <C-B> <Esc>:update<CR> :CtrlPBuffer<CR>
 
 " Home and End movements via Ctrl+a and Ctrl+e
 "nmap <C-a> ^

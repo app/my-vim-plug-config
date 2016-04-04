@@ -101,9 +101,14 @@ imap <C-Up> <Esc>:lprevious<CR>
 " Fzf shortcuts
 nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
 nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
-nmap <leader>t :call MyBTags()<CR>
-nmap <leader>b :call MyBuffers()<CR>
+nmap <leader>ot :call MyBTags()<CR>
+nmap <leader>ob :call MyBuffers()<CR>
+nmap <leader>of :call MyFiles()<CR>
 
+" CtrlP key maps
+nmap <C-B> :CtrlPBuffer<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+imap <C-B> <Esc>:update<CR> :CtrlPBuffer<CR>
 
 " Home and End movements via Ctrl+a and Ctrl+e
 "nmap <C-a> ^

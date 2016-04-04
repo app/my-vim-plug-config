@@ -15,6 +15,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set laststatus=2
+" Hilighting colors of errors - White symbols on Red background
+hi SpellBad ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 
 autocmd FileType coffee set tabstop=2 | set shiftwidth=2 | set expandtab| set softtabstop=2| set list

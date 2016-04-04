@@ -70,6 +70,8 @@ imap <C-h> <Esc>:%s/<C-R>=expand("<cword>")<CR>/
 " Search text under cursor
 nmap <C-f> /<C-R>=expand("<cword>")<CR><CR>
 imap <C-f> <Esc>/<C-R>=expand("<cword>")<CR><CR>
+" Search inside selected text
+vmap <C-f> <Esc>/\%V
 
 
 " Add new line below in Insert mode
@@ -104,6 +106,8 @@ nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
 nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
 nmap <leader>t :call MyBTags()<CR>
 
+" CtrlP key maps
+nmap <leader>b :CtrlPBuffer<CR>
 
 " Home and End movements via Ctrl+a and Ctrl+e
 "nmap <C-a> ^

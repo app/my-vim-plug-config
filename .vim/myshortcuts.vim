@@ -16,10 +16,10 @@ inoremap <C-Q> <C-O>:q<CR>
 noremap <silent> <Leader>q :bd<CR>
 
 " Toggle comments by pressing cc while in normal mode
-map cc <leader>c<space>
+nmap cc <leader>c<space>
 " Cyrillic 'сс' :)
-map сс <leader>c<space>
-map <leader>/ <leader>c<space>
+nmap сс <leader>c<space>
+nmap <leader>/ <leader>c<space>
 
 " Select all text
 nmap <C-a> ggVG
@@ -87,15 +87,12 @@ vmap <Leader>v c'<c-r>"'<esc>
 
 " Переход к первой локации/ошибке
 nmap <leader>1 :lfirst<CR>
-imap <leader>1 :lfirst<CR>
 " Переход к следующей локации. Используется для перехода к следующей ошибке
 nmap <leader>n :lnext<CR>
-imap <leader>n <Esc>:lnext<CR>
 nmap <C-Down> :lnext<CR>
 imap <C-Down> <Esc>:lnext<CR>
 " Переход к предыдущей локации. Используется для перехода к предыдущей ошибке
 nmap <leader>p :lprevious<CR>
-imap <leader>p <Esc>:lprevious<CR>
 nmap <C-Up> :lprevious<CR>
 imap <C-Up> <Esc>:lprevious<CR>
 

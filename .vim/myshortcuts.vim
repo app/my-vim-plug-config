@@ -17,8 +17,10 @@ noremap <silent> <Leader>q :bd<CR>
 
 " Toggle comments by pressing cc while in normal mode
 nmap cc <leader>c<space>
+vmap cc <leader>c<space>
 " Cyrillic 'сс' :)
 nmap сс <leader>c<space>
+vmap cc <leader>c<space>
 nmap <leader>/ <leader>c<space>
 
 " Select all text
@@ -33,8 +35,8 @@ nmap <C-j> <C-d>
 nmap <C-k> <C-u>
 
 " Paste with autoindent
-nnoremap p p==
-nnoremap <S-p> <S-p>==
+"nnoremap p p==
+"nnoremap <S-p> <S-p>==
 
 " Search highlighting redefinition
 " Use Ctrl+l toif !exists("*ReloadConfigs") swith off highlighting of highlighted text
@@ -100,6 +102,7 @@ imap <C-Up> <Esc>:lprevious<CR>
 nmap <leader>f :FzfAg<space><C-R>=expand("<cword>")<CR><CR>
 nmap <leader>F :FzfAg<space><C-R>=expand("<cword>")<CR>
 nmap <leader>t :call MyBTags()<CR>
+nmap <leader>b :call MyBuffers()<CR>
 
 
 " Home and End movements via Ctrl+a and Ctrl+e

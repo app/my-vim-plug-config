@@ -30,10 +30,10 @@ autocmd FileType php set tabstop=2 | set shiftwidth=2
 
 
 " Stop moving cursor back with Escape
-let CursorColumnI = 0
-autocmd InsertEnter * let CursorColumnI = col('.')
-autocmd CursorMovedI * let CursorColumnI = col('.')
-autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif"
+"let CursorColumnI = 0
+"autocmd InsertEnter * let CursorColumnI = col('.')
+"autocmd CursorMovedI * let CursorColumnI = col('.')
+"autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif"
 
 " Compile *.coffee files on Save
 autocmd BufWritePost *.coffee silent make! -b -m

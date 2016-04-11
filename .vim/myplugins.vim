@@ -61,6 +61,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_regexp = 1
+let g:ctrlp_working_path_mode = 'ra'
 "let g:ctrlp_custom_ignore = {
       "\ 'dir':  '\v[\/]\.(git|hg|svn)$',
       "\ 'file': '\v\.(exe|so|dll)$',
@@ -86,8 +87,13 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 " use jshint
+" sudo npm install jshint -g
 " jshint should be installed and available in your command line 
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_html_checkers = ['jshint']
+" installed by
+" sudo gem install rake rspec bundler pg_query && sudo gem install sqlint
+let g:syntastic_sql_checkers = ['sqlint']
 
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1

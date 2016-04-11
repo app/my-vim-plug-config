@@ -72,6 +72,8 @@ imap <C-h> <Esc>:%s/<C-R>=expand("<cword>")<CR>/
 " Search text under cursor
 nmap <C-f> /<C-R>=expand("<cword>")<CR><CR>
 imap <C-f> <Esc>/<C-R>=expand("<cword>")<CR><CR>
+" Search inside selected text
+vmap <C-f> <Esc>/\%V
 
 
 " Add new line below in Insert mode

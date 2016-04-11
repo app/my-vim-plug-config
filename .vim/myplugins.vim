@@ -20,6 +20,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'heavenshell/vim-jsdoc', {'for':'javascript'}  " inserts jsdoc comments before function
 "Plug 'othree/jspc.vim',{'for':'javascript'}
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for':'javascript' }
+Plug '~/devel/gt-s/aux/vim-gt-script'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -28,9 +29,10 @@ call plug#end()
 if &term!="xterm"
   syntax enable
   set background=dark
-  set t_Co=16
+  "set background=light
+  "set t_Co=16
   "set t_Co=256
-  let g:solarized_termcolors=16
+  "let g:solarized_termcolors=16
   "let g:solarized_termcolors=256
   colorscheme solarized
 endif
